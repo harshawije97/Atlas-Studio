@@ -1,6 +1,5 @@
-import AiGraph from "@/components/svg/ai-graph";
 import UpgradeGradient from "@/components/svg/upgrade-gradient";
-import { IconCalendarEvent, IconClipboardCheck, IconDownload, IconFileText, IconGridDots, IconUserPlus, IconUsers } from "@tabler/icons-react";
+import { IconBrain, IconCalendarEvent, IconClipboardCheck, IconDownload, IconFileText, IconGridDots, IconUserPlus, IconUsers } from "@tabler/icons-react";
 
 export const mainItems = [
   {
@@ -8,7 +7,7 @@ export const mainItems = [
     label: "Planner",
     icon: <IconCalendarEvent stroke={1.5} />,
   },
-  { href: "/ai", label: "AI", icon: <AiGraph /> },
+  { href: "/ai", label: "AI", icon: <IconBrain stroke={1.5} /> },
   { href: "/teams", label: "Teams", icon: <IconUsers stroke={1.5} /> },
   { href: "/docs", label: "Docs", icon: <IconFileText stroke={1.5} /> },
   { href: "/forms", label: "Forms", icon: <IconClipboardCheck stroke={1.5} /> },
