@@ -1,15 +1,17 @@
 import UpgradeGradient from "@/components/svg/upgrade-gradient";
 import { IconBrain, IconCalendarEvent, IconClipboardCheck, IconDownload, IconFileText, IconGridDots, IconUserPlus, IconUsers } from "@tabler/icons-react";
 
+
+const prefix = "/portal";
 export const mainItems = [
   {
-    href: "/planner",
+    href: `${prefix}/planner`,
     label: "Planner",
     icon: <IconCalendarEvent stroke={1.5} />,
   },
-  { href: "/ai", label: "AI", icon: <IconBrain stroke={1.5} /> },
-  { href: "/teams", label: "Teams", icon: <IconUsers stroke={1.5} /> },
-  { href: "/docs", label: "Docs", icon: <IconFileText stroke={1.5} /> },
+  { href: `${prefix}/ai`, label: "AI", icon: <IconBrain stroke={1.5} /> },
+  { href: `${prefix}/teams`, label: "Teams", icon: <IconUsers stroke={1.5} /> },
+  { href: `${prefix}/docs`, label: "Docs", icon: <IconFileText stroke={1.5} /> },
   { href: "/forms", label: "Forms", icon: <IconClipboardCheck stroke={1.5} /> },
   { href: "/more", label: "More", icon: <IconGridDots stroke={1.5} /> },
 ];
