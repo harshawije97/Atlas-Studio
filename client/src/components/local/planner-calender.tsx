@@ -45,54 +45,18 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import {
+  CalendarId,
+  Settings,
+  View,
+  CalEvent,
+  Draft,
+  Placed,
+} from "@/lib/calender-types";
 
 /* -------------------------------------------------------------------------- */
 /*  Types & constants                                                         */
 /* -------------------------------------------------------------------------- */
-
-type View = "day" | "week" | "month";
-type CalendarId = "personal" | "work" | "team";
-
-interface CalEvent {
-  id: string;
-  title: string;
-  /** epoch ms */
-  start: number;
-  /** epoch ms (exclusive) */
-  end: number;
-  allDay: boolean;
-  calendarId: CalendarId;
-  description?: string;
-}
-
-interface Settings {
-  weekStartsOn: 0 | 1;
-  hour24: boolean;
-  showWeekends: boolean;
-  hatchOffHours: boolean;
-  /** working hours, 0-24 */
-  workStart: number;
-  workEnd: number;
-}
-
-interface Draft {
-  id?: string;
-  title: string;
-  date: string; // yyyy-mm-dd
-  startTime: string; // HH:mm
-  endTime: string; // HH:mm
-  allDay: boolean;
-  calendarId: CalendarId;
-  description: string;
-}
-
-interface Placed {
-  ev: CalEvent;
-  col: number;
-  cols: number;
-  startMin: number;
-  endMin: number;
-}
 
 const HOUR_H = 64; // px per hour
 const GUTTER = 88; // px, time label column
